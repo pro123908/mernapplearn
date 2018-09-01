@@ -2,6 +2,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const passport = require("passport");
 
 // Getting all the routes for the server
 const users = require("./routes/api/users");
@@ -31,6 +32,12 @@ mongoose
 
 // Setting up / route for the server
 app.get("/", (req, res) => res.send("Hello"));
+
+//Passport middleware
+app.use(passport.initialize());
+
+//passport config
+require("./config/passport.js")(passport);
 
 //Secondary routes
 app.use("/api/users", users);
