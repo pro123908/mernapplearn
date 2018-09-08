@@ -1,3 +1,4 @@
+//Function to check if given data structure is empty of not?
 const isEmpty = value =>
   value === undefined ||
   value === null ||

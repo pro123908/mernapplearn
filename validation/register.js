@@ -41,6 +41,7 @@ module.exports = function validateRegisterInput(data) {
     errors.password2 = "Confirm Password is required";
   }
 
+  // Returning array "errors" and true/false depending on array is empty or not?
   return {
     errors,
     isValid: isEmpty(errors)

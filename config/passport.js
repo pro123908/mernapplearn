@@ -1,3 +1,4 @@
+// For authentication of User
 const jwtStrategy = require("passport-jwt").Strategy;
 const extractJWT = require("passport-jwt").ExtractJwt;
 const mongoose = require("mongoose");
