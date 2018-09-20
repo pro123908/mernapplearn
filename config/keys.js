@@ -1,6 +1,5 @@
-// Config URI string for mongoDB connection from mlab
-module.exports = {
-  mongoURI:
-    "mongodb://pro123908:home123456@ds233212.mlab.com:33212/mernapplearn",
-  secret: "secret"
-};
+if (process.env.NODE_ENV === "production") {
+  module.exports = require("./keys_prod");
+} else {
+  module.exports = require("./keys_dev");
+}
